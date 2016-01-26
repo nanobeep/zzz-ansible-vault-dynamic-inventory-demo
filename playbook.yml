@@ -1,0 +1,6 @@
+---
+- hosts: all
+  remote_user: vagrant
+  tasks:
+  - debug: msg="Just a test playbook..."
+  
