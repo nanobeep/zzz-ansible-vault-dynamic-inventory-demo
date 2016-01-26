@@ -12,6 +12,14 @@ Use the Dynamic Inventory script to decrypt and parse the Ansible Vault encrypte
 
 In this example, I'm using the [Vagrant Dynamic Inventory](https://gist.github.com/lorin/4cae51e123b596d5c60d) from Lorin Hochstein (author of "Ansible Up and Running"). The Vagrantfile is using the "ubuntu/trusty64" box, but feel free to replace it with whatever box you may already have on your system, it actually doesn't get used other than for the inventory.
 
+Also, to better understand what is happening, you may want to run these first:
+
+```
+> cat credentials.conf # To see that this is truly encrypted
+> cat vault-pass # The password we are using for vault
+> ansible-vault view credentials.conf --vault-password-file vault-pass
+```
+
 ### How to run:
 
 ```
